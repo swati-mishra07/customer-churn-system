@@ -171,8 +171,9 @@ I built an end-to-end customer churn prediction system using XGBoost, deployed i
 - Build frontend dashboard (React)
 - Automate model retraining pipeline
 
+---
 
-## 👩‍💻 Author
+👩‍💻 Author
 - Swati Mishra
 
 - GitHub: https://github.com/swati-mishra07
