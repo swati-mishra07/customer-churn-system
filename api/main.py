@@ -28,6 +28,14 @@ def predict(data: dict):
     try:
         df = pd.DataFrame([data])
 
+
+        # ===== ADD THESE LINES HERE =====
+        df['BalanceSalaryRatio'] = df['Balance'] / df['EstimatedSalary']
+        df['TenureByAge'] = df['Tenure'] / df['Age']
+        df['ProductsPerTenure'] = df['NumOfProducts'] / df['Tenure']
+        # ================================
+
+
         # Ensure correct feature order
         df = df[features]
 

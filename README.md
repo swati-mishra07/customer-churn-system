@@ -13,8 +13,7 @@
 
 ## 📌 Overview
 
-An **end-to-end Machine Learning system** that predicts customer churn and recommends actionable business strategies.  
-The project integrates **ML, API, Database, and Business Intelligence** to enable real-time decision-making.
+An **end-to-end Machine Learning system** that predicts customer churn and enables proactive business decisions using data-driven insights.
 
 ---
 
@@ -23,37 +22,35 @@ The project integrates **ML, API, Database, and Business Intelligence** to enabl
 Banks lose customers silently, leading to revenue loss.  
 Acquiring new customers is significantly more expensive than retaining existing ones.
 
-👉 **Goal:** Identify high-risk customers *before* they churn and take proactive actions.
+👉 **Goal:** Identify high-risk customers *before* they churn.
 
 ---
 
 ## 💡 Solution
 
-This system:
-
-- Predicts churn probability using **XGBoost**
-- Segments customers into **High / Medium / Low Risk**
-- Provides **actionable recommendations**
-- Serves predictions via **FastAPI**
-- Stores results in **MySQL**
-- Visualizes insights through **Power BI dashboard**
+- Predict churn using **XGBoost**
+- Segment customers into **risk categories**
+- Serve predictions via **FastAPI**
+- Store outputs in **MySQL**
+- Visualize insights in **Power BI**
 
 ---
 
 ## 🏗️ System Architecture
-- Customer Data
-- ↓
-- Feature Engineering
-- ↓
-- ML Model (XGBoost)
-- ↓
-- FastAPI (Real-time API)
-- ↓
-- MySQL Database
-- ↓
-- Power BI Dashboard
-- ↓
-- Business Actions
+Customer Data
+↓
+Feature Engineering
+↓
+ML Model (XGBoost)
+↓
+FastAPI API
+↓
+MySQL Database
+↓
+Power BI Dashboard
+↓
+Business Actions
+
 
 
 ---
@@ -61,7 +58,7 @@ This system:
 ## ⚙️ Tech Stack
 
 | Category | Tools |
-|--------|------|
+|----------|------|
 | Language | Python |
 | ML Model | XGBoost |
 | Backend | FastAPI |
@@ -71,43 +68,70 @@ This system:
 
 ---
 
-## 🚀 Key Features
+## 📁 Project Structure
+churn-system/
+│── api/
+│── src/
+│── models/
+│── data/
+│── dashboard/
+│── notebooks/
+│── README.md
 
-- ✅ Churn Prediction Model (Classification)
-- ✅ Feature Engineering & Data Preprocessing
-- ✅ Model Optimization (GridSearchCV)
-- ✅ SHAP Explainability
-- ✅ Risk Segmentation
-- ✅ Real-time API Deployment
-- ✅ SQL Data Integration
-- ✅ Business KPI Dashboard
-- ✅ Action Recommendation System
 
 ---
 
-## 📊 Dashboard Preview
+## 🚀 Key Features
 
-### 🟣 Executive Overview
-![Executive](dashboard/1_executive.png)
+- Churn Prediction Model  
+- Feature Engineering  
+- Model Optimization  
+- SHAP Explainability  
+- API Deployment  
+- SQL Integration  
+- Business Dashboard  
 
-### 🔵 Customer Analysis
-![Analysis](dashboard/2_analysis.png)
+---
 
-### 🟠 Risk Segmentation
-![Risk](dashboard/3_risk.png)
+## 🎥 Demo
 
-### 🔴 Business Actions
+### 🔌 FastAPI
+![API Demo](dashboard/api_demo.png)  
+![API Result](dashboard/api_result_demo.png)
+
+### 📊 Dashboard
+![Executive](dashboard/1_executive.png)  
+![Analysis](dashboard/2_analysis.png)  
+![Risk](dashboard/3_risk.png)  
 ![Actions](dashboard/4_actions.png)
 
 ---
 
-## 🧠 Business Impact
+## 📈 Model Performance
 
-- Identify high-risk customers early  
-- Improve retention strategies  
-- Reduce churn rate  
-- Increase customer lifetime value  
-- Enable data-driven decision-making  
+- Accuracy: 86.2%  
+- ROC-AUC: 0.73  
+
+### Classification Report
+
+| Class | Precision | Recall | F1-score |
+|------|----------|--------|----------|
+| Non-Churn | 0.89 | 0.95 | 0.92 |
+| Churn | 0.70 | 0.51 | 0.59 |
+
+### Insight
+
+Model performs well on non-churn users but has moderate recall for churn due to class imbalance.
+
+👉 Future improvement: SMOTE / class balancing
+
+---
+
+## 💼 Business Actions
+
+- 🔴 High Risk → Retention offers  
+- 🟡 Medium Risk → Engagement campaigns  
+- 🟢 Low Risk → Loyalty rewards  
 
 ---
 
@@ -118,11 +142,9 @@ This system:
 ```bash
 uvicorn api.main:app --reload
 
-## 📍 Endpoint
-
+📍 Endpoint
 POST /predict
-
-📥 Sample Request
+📥 Request
 {
   "CreditScore": 600,
   "Age": 45,
@@ -137,46 +159,47 @@ POST /predict
   "Gender_Male": 1
 }
 
-📤 Sample Response
+📤 Response
 {
   "churn_probability": 0.82,
-  "risk": "High Risk 🔴"
+  "risk": "High Risk"
 }
 
+📂 Dataset
+Bank Churn Modelling Dataset (Kaggle)
+Not included due to size
 
-## 🧪 How to Run Locally
-
-git clone <https://github.com/swati-mishra07/customer-churn-system.git>
+---
+🧪 Run Locally
+git clone https://github.com/swati-mishra07/customer-churn-system.git
 cd churn-system
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn api.main:app --reload
 
+---
+🎤 Interview Explanation
+Built an end-to-end churn prediction system using XGBoost, deployed via FastAPI, integrated with MySQL, and visualized insights using Power BI.
 
+🏆 Unique Points
 
-##🎤 Interview Explanation
-I built an end-to-end customer churn prediction system using XGBoost, deployed it via FastAPI for real-time predictions, stored results in MySQL, and created a Power BI dashboard with KPIs and actionable insights to support business decisions.
+- ML + Backend + BI integration
+- Real business use-case
+- Production-style architecture
 
-##🏆 What Makes This Project Unique
-- Goes beyond prediction → decision-making system
--Combines Machine Learning + Backend + Business Intelligence
--Focuses on real-world business impact
--Designed with production-level architecture
-
-## 📌 Future Improvements
-
-- Deploy API to cloud (Render / AWS)
-- Add real-time data streaming
-- Build frontend dashboard (React)
-- Automate model retraining pipeline
+📌 Future Improvements
+- Cloud deployment
+- Real-time data pipeline
+- Frontend app
+- Auto retraining
 
 ---
-
 👩‍💻 Author
-- Swati Mishra
+Swati Mishra
 
--Github : https://github.com/swati-mishra07
+- GitHub: https://github.com/swati-mishra07
+- LinkedIn: https://www.linkedin.com/in/swati-mishra-801193308
 
--LinkedIn: https://www.linkedin.com/in/swati-mishra-801193308
+---
 
