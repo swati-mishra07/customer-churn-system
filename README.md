@@ -5,8 +5,8 @@
   <img src="https://img.shields.io/badge/XGBoost-ML-orange">
   <img src="https://img.shields.io/badge/FastAPI-Backend-green?logo=fastapi">
   <img src="https://img.shields.io/badge/MySQL-Database-blue?logo=mysql">
-  <img src="https://img.shields.io/badge/PowerBI-Dashboard-yellow?logo=powerbi">
-  <img src="https://img.shields.io/badge/Status-Production--Ready-brightgreen">
+  <img src="https://img.shields.io/badge/PowerBI-Dashboard-yellow?logo=powerbi"
+  
 </p>
 
 ---
