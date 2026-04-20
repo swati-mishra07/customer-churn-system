@@ -1,0 +1,29 @@
+# Virtual Environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Model files (optional - if large)
+*.pkl
+
+# Data files (optional - if large)
+data/*.csv
+
+# Logs
+*.log
