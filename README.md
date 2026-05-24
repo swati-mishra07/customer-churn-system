@@ -188,12 +188,6 @@ Built an end-to-end churn prediction system using XGBoost, deployed via FastAPI,
 - Real business use-case
 - Production-style architecture
 
-📌 Future Improvements
-- Cloud deployment
-- Real-time data pipeline
-- Frontend app
-- Auto retraining
-
 ---
 👩‍💻 Author
 Swati Mishra
